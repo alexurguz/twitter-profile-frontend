@@ -1,0 +1,27 @@
+
+
+aws
+Crear bucket s3
+cuando se vaya a crear el bucket
+uncheck Block all public access
+check Turning off block all public access might result in this bucket and the objects within becoming public
+
+Crear usuario IAM aws 
+	con permisos 
+		AmazonS3FullAccess
+Configurar aws cli con las keys del user IAM
+
+proyect
+yarn install
+yarn build
+
+Publicar en aws
+modificar en el package json el script 
+"deploy": "craco build && aws s3 sync build/ s3:{MY-S3-BUCKET-NAME} --acl public-read"
+
+UNA VEZ EL BUCKET ESTÉ PUBLICADO IR AL BUCKET S3 enter option properties find Static website hosting en edit enable 
+
+put in field Index document the value index.html
+put in field Error document the value index.html
+
+finally copy in the same section Static website hosting the site url in the block Bucket website endpoint
