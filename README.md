@@ -1,6 +1,6 @@
 # Twitter-profile-frontend
 
-A project that allows displaying the information of a user's profile and the list of associated tweets.
+A project that allows displaying the information of a user's profile and the list of associated tweets, was created with context, Create React App, Tailwind css.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -61,5 +61,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+Time spent
+
+Design and development 3 hours
 
 Thanks to read!
