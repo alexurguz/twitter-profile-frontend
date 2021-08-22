@@ -19,7 +19,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "deploy": "craco build && aws s3 sync build/ s3://twitter-profile-frontend --acl public-read"
+    "deploy": "craco build && aws s3 sync build/ s3://{BUCKECT-BACKEND-NAME} --acl public-read"
   },
   "eslintConfig": {
     "extends": [
