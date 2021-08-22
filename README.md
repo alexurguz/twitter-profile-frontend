@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# Twitter-profile-frontend
+
+A project that allows displaying the information of a user's profile and the list of associated tweets.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── public                  # Public files
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    |    ├── components         # Main components jsx
+    |    ├── config             # Config files
+    |    ├── context            # Files with status management
+    |    ├── screens            # All project screens
+    |    └── utils              # Util files
+    └── README.md
+
+## Deploy in S3 AWS bucket
+
+> 1.   Create an [AWS](https://aws.amazon.com/free/) account.
+> 2.   Install [AWS CLI]( https://aws.amazon.com/cli/).
+> 3.   Create [S3 Bucket](https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/creating-bucket.html) when you are creating the bucket please make the next steps:
+-  `uncheck in the` **Block all public access**
+-  `check` **Turning off block all public access might result in this bucket and the objects within becoming public**
+> 4.   Create an [IAM CLI AWS user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_cliwpsapi) the user needs the next permission:
+- `AmazonS3FullAccess`
+> 5.   Save the credentials IAM CLI AWS user is a file .csv
+> 6.   Configure AWS CLI with user IAM keys use in your terminal the command `aws configure`
+> 7.   In the package.json file change, the script with the backend bucket name obtained when the backend was deployed and replace the {BUCKECT-BACKEND-NAME}
+> 8.   Execute in the root path to the project `yarn install`
+> 9.   Execute in the root path to the project `yarn deploy`
+> 10. Go to your [AWS Console](https://console.aws.amazon.com/console/) find your S3 Service and enter in your S3 Bucket
+> 11.  Go and select the Permission tab, find **Static website hosting** edit enable
+> 12. Put in field **Index document** the value **index.html**
+> 13. Put in field **Error document** the value **index.html**
+> 14. Finally, find in the same section Static **website hosting** and copy the site URL in the **block Bucket website endpoint** the URL is like that [http://twitter-profile-frontend.s3-website-us-east-1.amazonaws.com/](http://twitter-profile-frontend.s3-website-us-east-1.amazonaws.com/)
+
+### yarn start
 
 ## Available Scripts
 
@@ -14,11 +50,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
@@ -28,43 +59,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
