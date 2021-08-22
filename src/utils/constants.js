@@ -1,0 +1,1 @@
+export const URL_API_TWITTER_PROFILE =  'https://b1lsmt9d6l.execute-api.us-east-1.amazonaws.com/dev'
