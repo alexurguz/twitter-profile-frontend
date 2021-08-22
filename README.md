@@ -16,6 +16,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     |    └── utils              # Util files
     └── README.md
 
+## Add in S3 AWS bucket
+
+Before sta start with deploying the project in AWS S3 Bucket yo should replace the **`{URL_API_TWITTER_PROFILE}`** in the file **`src/utils/constants.js`** because is the URL that connects with the `twitter-profile-api` this means, that is necessary first that you deploy the backend `twitter-profile-backend` serverless project.
+
 ## Deploy in S3 AWS bucket
 
 > 1.   Create an [AWS](https://aws.amazon.com/free/) account.
@@ -27,16 +31,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `AmazonS3FullAccess`
 > 5.   Save the credentials IAM CLI AWS user is a file .csv
 > 6.   Configure AWS CLI with user IAM keys use in your terminal the command `aws configure`
-> 7.   In the package.json file change, the script with the backend bucket name obtained when the backend was deployed and replace the {BUCKECT-BACKEND-NAME}
+> 7.   In the package.json file change, the script with the backend bucket name obtained when the backend was deployed and replace the **`{BUCKECT-BACKEND-NAME}`**
 > 8.   Execute in the root path to the project `yarn install`
 > 9.   Execute in the root path to the project `yarn deploy`
-> 10. Go to your [AWS Console](https://console.aws.amazon.com/console/) find your S3 Service and enter in your S3 Bucket
+> 10.  Go to your [AWS Console](https://console.aws.amazon.com/console/) find your S3 Service and enter in your S3 Bucket
 > 11.  Go and select the Permission tab, find **Static website hosting** edit enable
-> 12. Put in field **Index document** the value **index.html**
-> 13. Put in field **Error document** the value **index.html**
-> 14. Finally, find in the same section Static **website hosting** and copy the site URL in the **block Bucket website endpoint** the URL is like that [http://twitter-profile-frontend.s3-website-us-east-1.amazonaws.com/](http://twitter-profile-frontend.s3-website-us-east-1.amazonaws.com/)
-
-### yarn start
+> 12.  Put in field **Index document** the value **index.html**
+> 13.  Put in field **Error document** the value **index.html**
+> 14.  Finally, find in the same section Static **website hosting** and copy the site URL in the **block Bucket website endpoint** the URL is like that [http://twitter-profile-frontend.s3-website-us-east-1.amazonaws.com/](http://twitter-profile-frontend.s3-website-us-east-1.amazonaws.com/)
 
 ## Available Scripts
 
@@ -59,3 +61,5 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+Thanks to read!
